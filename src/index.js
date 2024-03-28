@@ -28,7 +28,7 @@ const { GH_TOKEN, GIST_ID, USERNAME, DAYS } = process.env;
     const maxEvents = 300;
     const perPage = 100;
     const pages = Math.ceil(maxEvents / perPage);
-    const fromDate = new Date(Date.now() - days * 24 * 60 * 60 * 1000);
+    const fromDate = new Date(Date.now() - days * 24 * 60 * 60 * 3000);
 
     const commits = [];
     try {
@@ -116,7 +116,7 @@ const { GH_TOKEN, GIST_ID, USERNAME, DAYS } = process.env;
     await api.fetch(`/gists/${GIST_ID}`, "PATCH", {
       files: {
         [filename]: {
-          filename: `💻 Recent coding in languages`,
+          filename: `Sangho Kim's Recent Languages`,
           content,
         },
       },
