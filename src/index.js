@@ -28,7 +28,7 @@ const { GH_TOKEN, GIST_ID, USERNAME, DAYS } = process.env;
     const maxEvents = 300;
     const perPage = 100;
     const pages = Math.ceil(maxEvents / perPage);
-    const fromDate = new Date(Date.now() - days * 24 * 60 * 60 * 3000);
+    const fromDate = new Date(Date.now() - days * 24 * 60 * 60 * 10000);
 
     const commits = [];
     try {
